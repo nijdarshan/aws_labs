@@ -35,3 +35,23 @@ VPC: MyVPC
 
 Destination: 0.0.0.0/0
 Target: IGW
+
+# Create NAT Gateway
+
+Name: my-nat-gw
+Subnet: Public Subnet
+
+# Add NGW route to Private RT
+
+Destination: 0.0.0.0/0
+Target: NGW
+
+# Create a Security Group with 2 rules
+
+Name: my-security-group
+
+Inbound: All traffic 
+Source: Anywhere IPv4
+
+Outbound: All traffic 
+Source: Anywhere IPv4
