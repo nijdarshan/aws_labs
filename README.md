@@ -1,2 +1,2 @@
-# aws_labs
+# AWS Labs
 AWS Exercises &amp; Labs
