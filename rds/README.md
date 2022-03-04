@@ -1,3 +1,5 @@
+# Connect, Create & Insert to Postgres RDS
+
 Go to Server and try to connect with the database using 
 
 ```psql -h <database-endpoint> -U postgres -W -d nodejs_demo enter the password when asked```
