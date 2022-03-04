@@ -1,8 +1,8 @@
 # Connect, Create & Insert to Postgres RDS
 
-Go to Server and try to connect with the database using 
+Go to Server and try to connect with the database using enter the password when asked
 
-```psql -h <database-endpoint> -U postgres -W -d nodejs_demo enter the password when asked```
+```psql -h <database-endpoint> -U postgres -W -d nodejs_demo```
 
 Create a table using the below SQL script, this table will be used by the nodejs we have deployed to insert and retrieve the data
 
