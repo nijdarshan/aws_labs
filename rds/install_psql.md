@@ -22,6 +22,3 @@ EOF
 ```systemctl status postgresql-13```
                                          
 ```sudo su - postgres```
-
-```pssql```                                        
-
