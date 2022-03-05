@@ -1,13 +1,14 @@
+import os
 import boto3
 
 ec2 = boto3.resource('ec2')
-
+name = os.getenv('Name')
 
 def lambda_handler(event, context):
     filters = [
         {
             'Name': 'tag:Name',
-            'Values': ['Lambda-ec2']
+            'Values': [name]
         },
         {
             'Name': 'instance-state-name',
@@ -20,6 +21,6 @@ def lambda_handler(event, context):
 
     if len(runningInstances) > 0:
         startingUp = ec2.instances.filter(InstanceIds=runningInstances).stop()
-        print(f"Stopping {len(runningInstances)} Lambda-ec2 instances with id - {runningInstances}")
+        print(f"Stopping {len(runningInstances)} {name} instances with id - {runningInstances}")
     else:
-        print(f"There are no instances that are runing with name Lambda-ec2")
+        print(f"There are no instances that are runing with name {name}")
